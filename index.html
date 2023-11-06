@@ -12,7 +12,11 @@
     src: url("./fonts/Bliss2-Bold.woff") format("woff");
     font-display: swap;
   }
-
+  @font-face {
+  font-family: "Bliss-Heavy";
+  src: url("./fonts/Bliss2Heavy Regular.ttf") format('truetype');
+  font-display: swap;
+}
   @font-face {
     font-family: 'Gilroy SemiBold';
     src: url("./fonts/Gilroy-SemiBold.woff") format("woff");
@@ -60,12 +64,24 @@
 #es-magne-b6.es-magne-b6 .es-kv__img--packshot {
     max-width: 80%;
 }
+@media (min-width: 375px) {
+  #es-magne-b6.es-magne-b6 .es-kv__img--packshot {
+    max-width: 90%;
+  }
+}
+@media (min-width: 450px) {
+  #es-magne-b6.es-magne-b6 .es-kv__img--packshot {
+    max-width: 77%;
+  }
+}
 
 #es-magne-b6.es-magne-b6 .es-kv {
     background: linear-gradient(90deg, rgba(208,231,255,1) 0%, rgba(255,255,255,1) 50%, rgba(216,232,249,1) 100%);
     margin-bottom: 32px;
 }
-
+#es-magne-b6.es-magne-b6 .es-kv__container {
+  position: relative;
+}
 #es-magne-b6.es-magne-b6 .es-kv__background {
     /* display: none; */
     position: absolute;
@@ -95,7 +111,7 @@
     color: inherit;
     font-family: "Bliss";
     font-weight: 600;
-    font-size: 20px;
+    font-size: 19px;
     text-transform: uppercase;
     /* text-align: center; */
     text-shadow: 0px 0px 5px #7999cf;
@@ -105,11 +121,69 @@
     max-width: 243px;
 }
 
+#es-magne-b6.es-magne-b6 .es-kv__label {
+  font-family: "Bliss Heavy", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, -0.1011rem + 4.2553vw, 2rem);
+  max-width: 19ch;
+  color:#001883;
+  background-color: #FFF;
+  padding: 0.188rem 1rem;
+  position: absolute;
+  top: 38%;
+  left: 0;
+  z-index: 2;
+}
+@media (min-width: 390px) {
+  #es-magne-b6.es-magne-b6 .es-kv__label {
+    top: 40%;
+  }
+}
+
+@media (min-width: 576px) {
+  #es-magne-b6.es-magne-b6 .es-kv__label {
+    top: 35%;
+  }
+}
+
+@media (min-width: 768px) {
+  #es-magne-b6.es-magne-b6 .es-kv__label {
+    max-width: 17ch;
+    top: 38%;
+  }
+}
 #es-magne-b6.es-magne-b6 .es-kv__packshot {
     position: relative;
     padding-bottom: 24px;
+    z-index: 1;
 }
-
+#es-magne-b6.es-magne-b6 .es-kv__packshot:before {
+  content: "";
+  background: url("./images/shine.webp");
+  background-size: cover;
+  position: absolute;
+  top: -60%;
+  left: -5%;
+  height: 200px;
+  width: 200px;
+  z-index: -1;
+}
+@media (min-width: 576px) {
+  #es-magne-b6.es-magne-b6 .es-kv__packshot:before {
+    height: 300px;
+    width: 300px;
+    top: -50%;
+    left: -2%;
+  }
+}
+@media (min-width: 768px) {
+  #es-magne-b6.es-magne-b6 .es-kv__packshot:before {
+    height: 350px;
+    width: 350px;
+    top: -57%;
+    left: -3%;
+  }
+}
 #es-magne-b6.es-magne-b6 .es-kv__text {
     margin: 0;
     padding: 32px 0;
@@ -122,13 +196,13 @@
     text-align: center;
 }
 
-#es-magne-b6.es-magne-b6 .es-kv__badge {
+/* #es-magne-b6.es-magne-b6 .es-kv__badge {
     position: absolute;
     top: -35%;
     left: 5%;
     max-width: 25%;
     animation: es-pulse 4s infinite;
-}
+} */
 
 #es-magne-b6.es-magne-b6 .es-kv__content {
     display: flex;
@@ -1160,9 +1234,7 @@
 
 
 @media screen and (min-width: 375px){
-    #es-magne-b6.es-magne-b6 .es-kv__img--packshot {
-        max-width: 90%;
-    }
+    
     #es-magne-b6.es-magne-b6 .es-kv__background {
         /* display: block; */
         position: static;
@@ -1773,9 +1845,10 @@
           </div>
           <p class="es-kv__title">W Tobie <br> jest siła!</p>
           <p class="es-kv__subtitle">Wzmacniaj ją podwójną <br> dawką magnezu<sup class="es-index">6</sup></p>
+          <p class="es-kv__label">Teraz w nowym opakowaniu</p>
           <div class="es-kv__packshot">
-            <img src="./images/kv-packshot.webp" alt="Lek Magne B6 Forte, 100 tabletek powlekanych, dostępny jest bez recepty w aptece internetowej Melissa." class="es-kv__img es-kv__img--packshot" />
-            <img src="./images/kv-badge.webp" alt="" class="es-kv__img es-kv__badge" />
+            <img src="./images/kv-packshotNEW.webp" alt="Lek Magne B6 Forte, 100 tabletek powlekanych, dostępny jest bez recepty w aptece internetowej Melissa." class="es-kv__img es-kv__img--packshot" />
+            <!-- <img src="./images/kv-badge.webp" alt="" class="es-kv__img es-kv__badge" /> -->
           </div>
         </div>
         <p class="es-kv__text">Magnez nr 1 w&nbsp;Polsce<sup class="es-index">1</sup></p>
